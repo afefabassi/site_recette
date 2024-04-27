@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="recipe-card"  *ngFor="let recette of recettes">
+        <a href="">
+            <div class="image-container">
+                <img [src]="recette.image[0]"
+                    alt="image recette">
+                <div class="overlay">
+                    <!-- Add the content you want to display over the image here -->
+                    <p>Préparation: {{recette.tmps_preparation}}</p>
+                    <p>Cuisson: {{recette.tmps_cuisson}}</p>
+                    <p>serve: {{recette.nb_personne}}</p>
+                    <p>difficulté: {{recette.difficulte}}</p>
+                </div>
+            </div>
+            <h5 class="recipe-type">{{recette.type}}</h5>
+            <h3 class="recipe-title">
+                {{recette.nom}}
+            </h3>
+            <hr>
+            <div class="desc">
+                <div class="cooking-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>2hours</span>
+                </div>
+                <div class="recipe-difficulty">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <span>Facile</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    </div>

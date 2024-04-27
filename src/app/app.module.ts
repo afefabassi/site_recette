@@ -3,6 +3,9 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageModule } from './home-page/home-page.module';
+import { RecipesModule } from './recipes/recipes.module';
+import { RecetteListeComponent } from './recipes/recette-liste/recette-liste.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomePageModule,
+    RecipesModule
   ],
   providers: [
     provideClientHydration()
