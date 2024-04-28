@@ -1,0 +1,25 @@
+p {
+    color: #000;
+    font-family: "Open Sans";
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the container to the right */
+    /*align-items: center; /* Centers vertically */
+    /*height: 100vh;
+    /* Makes the container full height of the viewport */
+    /*padding: 0 20px; /* Add some padding to the sides */
+    margin-left:50%;
+    width: 40%;
+    margin-bottom: 20px;
+    /*margin-top: -430px;*/
+}
+hr{
+    width: 40%;
+    margin-left:50%;
+}

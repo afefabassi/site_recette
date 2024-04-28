@@ -18,4 +18,8 @@ export class RecetteService {
    getRecettes() {
     return this.httpClient.get(this.API_URL+this.ENDPOINT_RECETTES)
    }
+
+   getRecetteById(id: number){
+    return this.httpClient.get<any>(this.API_URL + this.ENDPOINT_RECETTES + id);
+  }
 }
