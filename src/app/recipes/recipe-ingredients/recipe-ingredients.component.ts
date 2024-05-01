@@ -6,15 +6,36 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./recipe-ingredients.component.css']
 })
 export class RecipeIngredientsComponent {
-  @Input() ingredientsString!: string; // Input property to receive the ingredients string
-  ingredientsObject: { [section: string]: string[] } = {}; // Object to hold the parsed ingredients
+  @Input() recipe: any;
+  ingredientsList!: { category: string, ingredients: string[] }[];
 
-  constructor() { }
+  constructor() {}
 
-  // Initialization logic
-  ngOnInit() {
-    if (this.ingredientsString) {
-      this.ingredientsObject = JSON.parse(this.ingredientsString.replace(/'/g, '"'));
+  ngOnChanges() {
+    if (this.recipe && this.recipe.ingredients) {
+      this.parseIngredients();
     }
   }
+
+  private parseIngredients() {
+    // Replace single quotes with double quotes in specific contexts
+    const ingredientsString = this.recipe.ingredients
+      .replace(/'(?=:)/g, '"') // Replace single quotes before colon with double quotes
+      .replace(/([{,\[])\s*'/g, '$1"') // Replace single quotes after {, [, , with double quotes
+      .replace(/'\s*([,\]}])/g, '"$1'); // Replace single quotes before }, ], , with double quotes
+    
+    console.log('Ingredients String:', ingredientsString); // Log the modified ingredients string
+    
+    try {
+      // Parse the corrected string as JSON
+      const ingredientsMap = JSON.parse(ingredientsString);
+  
+      // Convert the parsed object into the desired format
+      this.ingredientsList = Object.keys(ingredientsMap).map(category => {
+        return { category, ingredients: ingredientsMap[category] };
+      });
+    } catch (error) {
+      console.error('Error parsing ingredients JSON:', error);
+    }
+  }  
 }

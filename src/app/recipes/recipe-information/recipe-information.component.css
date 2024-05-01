@@ -1,16 +1,23 @@
+
 .container{
+    width: 200%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+/*.container{
     display: flex;
     width: 36%;
     margin-left: 10%;
     margin-top: 340px;
     margin-bottom: 70px;
-}
+}*/
 .container > div {
     flex: 1;
 }
 .type{
     border: 1px solid var(--lightgrey);
-    border-top: 5px solid black;
+    border-top: 5px solid var(--pink);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,7 +26,7 @@
 
     border: 1px solid var(--lightgrey);
     border-left: none;
-    border-top: 5px solid black;
+    border-top: 5px solid var(--pink);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,7 +34,7 @@
 .tmps_cuisson{
     border: 1px solid var(--lightgrey);
     border-left: none;
-    border-top: 5px solid black;
+    border-top: 5px solid var(--pink);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +43,7 @@
 .difficulte{
     border: 1px solid var(--lightgrey);
     border-left: none;
-    border-top: 5px solid black;
+    border-top: 5px solid var(--pink);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,7 +51,7 @@
 .nb_personne{
     border: 1px solid var(--lightgrey);
     border-left: none;
-    border-top: 5px solid black;
+    border-top: 5px solid var(--pink);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,16 +64,10 @@ h5{
  margin-bottom: 10px;
  margin-top: 5px;
  font-weight: 600;
+
 }
 p{
     text-align: center;
     font-family: "Open Sans", sans-serif;
     text-transform: capitalize;
-}
-hr{
-    border-top: 5px solid var(--black);
-    width: 36%;
-    margin-left: 10%;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }

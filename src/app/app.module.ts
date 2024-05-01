@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { RecetteListeComponent } from './recipes/recette-liste/recette-liste.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RecetteListeComponent } from './recipes/recette-liste/recette-liste.com
     RecipesModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

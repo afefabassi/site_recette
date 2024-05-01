@@ -1,16 +1,23 @@
+.container{
+    margin-bottom: 70px;
+}
+
 h1{
     margin-bottom: 20px;
     font-family: "Poiret One", sans-serif;
+    color: var(--pink);
+    font-size: 35px;
 }
-.container {
+
+/*.container {
     display: flex;
-    justify-content: flex-end;
+    /*justify-content: flex-end;
     flex-direction: column;
     margin-left:50%;
     width: 40%;
     margin-bottom: 20px;
     margin-top: -500px;
-}
+}*/
 .instructions{
     display: flex;
     margin-bottom: 0;
@@ -21,6 +28,8 @@ h1{
     padding: 15px;
     padding-left: 0;
     font-family: "Open Sans", sans-serif;
+    width: 10%;
+    text-align: left;
 }
 .instructions:first-of-type .counter {
     border-top: 1px solid var(--lightgrey);
@@ -32,6 +41,7 @@ h1{
     padding: 10px;
     text-align: justify;
     font-family: "Open Sans", sans-serif;
+    width: 100%;
     
 }
 .instructions:first-of-type .instruction {

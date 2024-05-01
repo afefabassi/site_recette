@@ -17,11 +17,10 @@ export class RecipeImageComponent {
   parseImageString() {
     if (this.imageString) {
       const imageArray = JSON.parse(this.imageString.replace(/'/g, '"'));
-      console.log(imageArray)
       if (imageArray.length > 0) {
         this.imageUrl = imageArray[0];  // Use the first image URL
       }
     }
-    
+
   }
 }

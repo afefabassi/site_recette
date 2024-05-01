@@ -13,6 +13,19 @@ import { RecipeInstructionsComponent } from './recipe-instructions/recipe-instru
 import { RecipeIngredientsComponent } from './recipe-ingredients/recipe-ingredients.component';
 import { RecipePropertiesComponent } from './recipe-properties/recipe-properties.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RecipeNutritionComponent } from './recipe-nutrition/recipe-nutrition.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FavouriteButtonComponent } from './favourite-button/favourite-button.component';
+import { CartButtonComponent } from './cart-button/cart-button.component';
+
+import { MatNativeDateModule } from '@angular/material/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
 
 
 
@@ -27,17 +40,28 @@ import { HttpClientModule } from '@angular/common/http';
         RecipeInformationComponent,
         RecipeInstructionsComponent,
         RecipeIngredientsComponent,
-        RecipePropertiesComponent
+        RecipePropertiesComponent,
+        RecipeNutritionComponent,
+        DatepickerComponent,
+        FavouriteButtonComponent,
+        CartButtonComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     RecetteListeComponent,
     RecipePageComponent
+  ],
+  providers:[
+    { provide: MAT_DATE_LOCALE, useValue: 'fr' }
   ]
 })
 export class RecipesModule { }

@@ -1,15 +1,22 @@
-.container {
+.container{
+  width: 200%;
+  margin-bottom: 70px;
+}
+
+/*.container {
     margin-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 36%;
     font-family: 'Open Sans', sans-serif;
-  }
+  }*/
   
   h3 {
     font-family: 'Poiret One', sans-serif;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    color: var(--pink);
+    font-size: 35px;
   }
   .header{
     margin-top: 10px;
@@ -25,7 +32,14 @@
     padding: 15px;
     padding-left: 0;
     font-family: "Open Sans", sans-serif;
+
   }
+
+  input[type="checkbox"]:checked + label {
+    background-color: green; /* Change background color when checked */
+  }
+
+  
   
   .content:first-of-type .checkbox {
     border-top: 1px solid var(--lightgrey);

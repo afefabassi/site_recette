@@ -12,10 +12,16 @@ export class RecipePropertiesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('Properties String:', this.propertiesString);
     if (this.propertiesString) {
-      this.properties = JSON.parse(this.propertiesString.replace(/'/g, '"'));
-      console.log('Parsed Properties:', this.properties);
+      try {
+        // Try parsing the string as JSON
+        this.properties = JSON.parse(this.propertiesString.replace(/'/g, '"'));
+      } catch (error) {
+        // If parsing as JSON fails, handle it as a non-JSON string
+        // Split the string based on the delimiter (e.g., ',')
+        this.properties = this.propertiesString.replace('[', '').replace(']', '').split(',');
+      }
+      console.log(this.properties);
     }
   }
 }
