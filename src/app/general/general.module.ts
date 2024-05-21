@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,FormsModule,RouterModule,
   ],
-  exports:[NavbarComponent,FooterComponent,]
+  exports:[NavbarComponent,FooterComponent,],
+  providers: []
 })
 export class GeneralModule { }
