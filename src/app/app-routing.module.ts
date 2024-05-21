@@ -6,6 +6,8 @@ import { RecipePageComponent } from './recipes/recipe-page/recipe-page.component
 import { LoginComponent } from './login/login/login.component';
 import { DashboardComponent } from './login/dashboard/dashboard.component';
 import { LayoutComponent } from './login/layout/layout.component';
+import { CalComponent } from './login/cal/cal.component';
+import { ListeCoursesComponent } from './login/liste-courses/liste-courses.component';
 
 
 
@@ -17,8 +19,8 @@ const routes: Routes = [
   /* ****** */
   {path:'dashboard', component:DashboardComponent},
   {path:'layout',component:LayoutComponent},
-
-
+  {path:'cal',component:CalComponent},
+  {path:'listecourses',component:ListeCoursesComponent},
 
 ];
 

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
+@import url('https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css');
 :root {
 	--yellow: #FFBD13;
 	--blue: #4383FF;
@@ -48,7 +47,7 @@
 	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
 }
 
-@keyframes animate {
+/* @keyframes animate {
 	0% {
 		opacity: 0;
 		transform: scale(1);
@@ -61,7 +60,7 @@
 		opacity: 1;
 		transform: scale(1);
 	}
-}
+} */
 
 
 .rating .star:hover {
