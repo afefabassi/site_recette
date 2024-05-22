@@ -24,8 +24,9 @@ import { CartButtonComponent } from './cart-button/cart-button.component';
 import { MatNativeDateModule,MAT_DATE_LOCALE } from '@angular/material/core';
 import { GeneralModule } from '../general/general.module';
 import { CommentsComponent } from './comments/comments.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { CommentsComponent } from './comments/comments.component';
         FavouriteButtonComponent,
         CartButtonComponent,
         CommentsComponent,
+        SearchbarComponent,
   ],
   imports: [
     GeneralModule,
@@ -55,7 +57,8 @@ import { CommentsComponent } from './comments/comments.component';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule,
 
   ],
   exports: [
