@@ -23,6 +23,15 @@ body{
 .recipe-card {
     width: 300px;
     overflow: hidden;
+    
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 35px;
 }
 h2 ,h3 {
   color: black;
