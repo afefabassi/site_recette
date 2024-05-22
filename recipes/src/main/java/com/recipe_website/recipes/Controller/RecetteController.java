@@ -34,5 +34,14 @@ public class RecetteController {
         recetteService.deleteRecette(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/type/{type}")
+    public List<Recette> getRecettesByType(@PathVariable String type) {
+        return recetteService.getRecettesByType(type);
+    }
 
+    @GetMapping("/search/{name}")
+    public List<Recette> searchRecettesByName(@PathVariable String name) {
+        return recetteService.searchRecettesByName(name);
+    }
 }

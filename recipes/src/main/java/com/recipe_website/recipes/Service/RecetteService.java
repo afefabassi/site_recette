@@ -30,5 +30,13 @@ public class RecetteService{
     public void deleteRecette(int id) {
         recetteRepository.deleteById(id);
     }
-    
+
+    public List<Recette> getRecettesByType(String type) {
+        return recetteRepository.findByType(type);
+    }
+
+    public List<Recette> searchRecettesByName(String name) {
+        return recetteRepository.findByNomContaining(name);
+    }
+
 }

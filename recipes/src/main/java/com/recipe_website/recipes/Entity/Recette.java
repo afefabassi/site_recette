@@ -2,6 +2,8 @@ package com.recipe_website.recipes.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "recettes")
 
@@ -25,6 +27,8 @@ public class Recette {
     private String image;
     private float rating;
     private float nb_vote;
+
+
 
     public int getId() {
         return id_recettes;
