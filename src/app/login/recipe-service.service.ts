@@ -7,6 +7,16 @@ export class RecipeServiceService {
 
   private recipes = [
     {
+      name: 'Pâtes À La Carbonara, La Vraie Recette !',
+      image: '../../../assets/images/pates.png',
+      ingredients: [
+        '80 gr de parmesan (ou pecorino)',
+        '4 tranches de pancetta (4 à 5 tranches)',
+        '2 oeufs',
+        'Poivre du moulin'
+      ]
+    },
+    {
       name: 'Chocolats Maison',
       image: '../../../assets/images/chocolats-maison.png',
       ingredients: [
