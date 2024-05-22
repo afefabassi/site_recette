@@ -207,103 +207,41 @@
 
 </div>
 
+<!-- Inside the HTML template -->
 <div class="part3">
   <h3 class="part3h3">Recettes Adaptées à Vos Goûts</h3>
-  <!-- lena bech t7ot el model ia  -->
-  <div class="fav">
-    <div class="recipe-card">
+  <div class="container">
+  
+    <div *ngFor="let recette of recommendations" class="recipe-card">
       <a href="">
-          <div class="image-container">
-              <img src="../../../assets/images/cookies.png"
-               alt="ff"   >
-              <div class="overlay">
-                  <!-- Add the content you want to display over the image here -->
-                  <p>Préparation: 20min</p>
-                  <p>Cuisson: 10min</p>
-                  <p>serve: 6 personnes</p>
-                  <p>difficulté: moyen</p>
-              </div>
+        <div class="image-container">
+          <!-- Bind the first image in the array using Angular's interpolation -->
+          <img [src]="sanitizeUrl(recette.image[0])" alt="Image of {{recette.nom}}">
+          <div class="overlay">
+            <p>Préparation: {{recette.tmps_preparation}}</p>
+            <p>Cuisson: {{recette.tmps_cuisson}}</p>
+            <p>Serve: {{recette.nb_personne}}</p>
+            <p>Difficulté: {{recette.difficulte}}</p>
           </div>
-          <h3 class="recipe-type">Dessert</h3>
-
-          <h2 class="recipe-title">
-            Cookies De Noel
-          </h2>
-          <hr>
-          <div class="desc">
-              <div class="cooking-time">
-                  <i class="fa-regular fa-clock"></i>
-                  <span>10min</span>
-              </div>
-              <div class="recipe-difficulty">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                  <span>Moyen</span>
-              </div>
+        </div>
+        <h3 class="recipe-type">{{recette.type}}</h3>
+        <h2 class="recipe-title">{{recette.nom}}</h2>
+        <hr>
+        <div class="desc">
+          <div class="cooking-time">
+            <i class="fa-regular fa-clock"></i>
+            <span>{{recette.tmps_cuisson}}</span>
           </div>
-      </a>
-    </div>
-    <div class="recipe-card">
-      <a href="">
-          <div class="image-container">
-              <img src="../../../assets/images/chocolats-maison.png"
-                  alt="imagerecette">
-              <div class="overlay">
-                  <!-- Add the content you want to display over the image here -->
-                  <p>Préparation: 1h</p>
-                  <p>Cuisson: 35min</p>
-                  <p>serve: 6 personnes</p>
-                  <p>difficulté: facile</p>
-              </div>
+          <div class="recipe-difficulty">
+            <i class="fa-regular fa-thumbs-up"></i>
+            <span>{{recette.difficulte}}</span>
           </div>
-          <h3 class="recipe-type">Goûter</h3>
-          <h2 class="recipe-title">
-            Chocolats Maison
-          </h2>
-          <hr>
-          <div class="desc">
-              <div class="cooking-time">
-                  <i class="fa-regular fa-clock"></i>
-                  <span>35min</span>
-              </div>
-              <div class="recipe-difficulty">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                  <span>Facile</span>
-              </div>
-          </div>
-      </a>
-    </div>
-    <div class="recipe-card">
-      <a href="">
-          <div class="image-container">
-              <img src="../../../assets/images/irish-coffee.png"
-                  alt="imagerecette">
-              <div class="overlay">
-                  <!-- Add the content you want to display over the image here -->
-                  <p>Préparation: 20min</p>
-                  <p>Cuisson: 5min</p>
-                  <p>serve: 1 personnes</p>
-                  <p>difficulté: facile</p>
-              </div>
-          </div>
-          <h3 class="recipe-type">Boisson</h3>
-          <h2 class="recipe-title">
-            Irish Coffee
-          </h2>
-          <hr>
-          <div class="desc">
-              <div class="cooking-time">
-                  <i class="fa-regular fa-clock"></i>
-                  <span>5min</span>
-              </div>
-              <div class="recipe-difficulty">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                  <span>Facile</span>
-              </div>
-          </div>
+        </div>
       </a>
     </div>
   </div>
-</div>
+  </div>
+
 <app-footer></app-footer>
 
 
